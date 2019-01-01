@@ -1,5 +1,5 @@
 //01-01-2019
-//stack implementation.
+//stack implementation
 #include<stdio.h>
 int top=-1;
 int isEmpty(){
