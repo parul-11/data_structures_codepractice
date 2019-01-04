@@ -1,3 +1,4 @@
+#program to implement queue
 class Queue:
     def __init__(self):
         self.Queue=list()
