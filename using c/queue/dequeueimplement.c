@@ -52,7 +52,7 @@ int delete_front(){
         printf("\nunderflow condition\n");
     }
     else{
-            int x;
+            int x=0;
             while(x<rear){
                 a[x]=a[x+1];
             }
@@ -74,9 +74,9 @@ int display(){
         printf("queue is empty\n");
     }
     else{
-        int i;
+        int i=0;
         printf("\n");
-        for(i=front+1;i<=rear;i++){
+        for(i=front;i<rear;i++){
             printf("%d ",a[i]);
         }
     }
