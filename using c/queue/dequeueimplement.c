@@ -28,7 +28,7 @@ int insert_rear(int element){
         
         a[rear]=element;
         rear++;
-        printf("%d ",element);
+        
     }
     display();
 }
@@ -39,26 +39,26 @@ int insert_front(int element){
     else{
         int x=rear;
         for(x=rear;x>0;x--){
-            a[rear]=a[rear-1];
+            a[x]=a[x-1];
         }
         rear=rear+1;
         a[front]=element;
-        printf("%d",element);
+    
    }
     display();
 }
 int delete_front(){
     if(front==rear){
-        printf("\nunderflow condition\n");
+        printf("underflow condition\n");
     }
     else{
             int x=0;
             while(x<rear){
                 a[x]=a[x+1];
+                x++;
             }
-            rear=rear-1;
-            display();    
-    }
+            rear=rear-1;   
+    }display();
 }
 int delete_rear(){
     if(front==rear){
@@ -66,8 +66,7 @@ int delete_rear(){
     }
     else{
         rear=rear-1;
-        display();
-    }
+    }display();
 }
 int display(){
     if(rear==0){
@@ -75,9 +74,9 @@ int display(){
     }
     else{
         int i=0;
-        printf("\n");
         for(i=front;i<rear;i++){
             printf("%d ",a[i]);
         }
+        printf("\n");
     }
 }

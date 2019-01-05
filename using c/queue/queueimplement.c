@@ -41,6 +41,7 @@ int pop(){
             int x;
             while(x<rear){
                 a[x]=a[x+1];
+                x++;
             }
             rear=rear-1;    
     }
