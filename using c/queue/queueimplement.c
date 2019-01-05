@@ -23,7 +23,7 @@ int main()
     display();
 }
 int push(int element){
-    if(rear==n-1){
+    if(rear==n){
         printf("\noverflow condition\n");
     }
     else{
@@ -38,10 +38,11 @@ int pop(){
         printf("\nunderflow condition\n");
     }
     else{
-        front++;
-        if(front>rear){
-            front=rear=0;
-        }
+            int x;
+            while(x<rear){
+                a[x]=a[x+1];
+            }
+            rear=rear-1;    
     }
     display();
 }
